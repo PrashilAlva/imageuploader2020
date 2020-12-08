@@ -55,7 +55,7 @@ def login():
     if request.method == "POST":
         uname = request.form['uname']
         pword = request.form['pword']
-        if uname == "inspektlabs" and pword == "secret":
+        if uname == "prashil" and pword == "secret":
             token = jwt.encode({'user': uname, 'exp': datetime.datetime.utcnow(
             ) + datetime.timedelta(seconds=30)}, app.config['SECRET_KEY'])
             session['access'] = token.decode('UTF-8')
