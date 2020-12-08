@@ -1,0 +1,12 @@
+.error{
+    color:red;
+}
+
+.warning{
+    color:rgb(163, 163, 9);
+}
+
+.container{ 
+    padding:10% 32%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

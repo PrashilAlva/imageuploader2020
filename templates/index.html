@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% if result %}
+<h1>Name of the Image uploaded is,</h1><br>
+<h1>{{name}}</h1>
+{% else %}
+<form action="/" method="POST">
+    <h1>Kindly upload a file below</h1>
+    <br>
+    <input type="file" name="fileName" accept="image/*" required><br><br>
+    <input type="submit" value="Upload">
+    {% endif %}
+    {% endblock body %}
