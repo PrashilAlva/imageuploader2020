@@ -33,7 +33,7 @@ def token_required(f):
 
 
 @app.route('/', methods=['GET', 'POST'])
-@limiter.limit("5/minute")
+@limiter.limit("5 per minute")
 @token_required
 def home():
     result = False
@@ -45,7 +45,7 @@ def home():
 
 
 @app.route('/login', methods=['GET', 'POST'])
-@limiter.limit("5/minute")
+@limiter.limit("5 per minute")
 def login():
     try:
         if session['access']:
@@ -65,4 +65,4 @@ def login():
     return render_template('login.html')
 
 if __name__ == "__main__":
-    app.run(port=4200, debug=True)
+    app.run(port=4200, debug=False)
