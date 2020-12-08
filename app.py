@@ -57,7 +57,7 @@ def login():
         pword = request.form['pword']
         if uname == "prashil" and pword == "secret":
             token = jwt.encode({'user': uname, 'exp': datetime.datetime.utcnow(
-            ) + datetime.timedelta(seconds=30)}, app.config['SECRET_KEY'])
+            ) + datetime.timedelta(minutes=1)}, app.config['SECRET_KEY'])
             session['access'] = token.decode('UTF-8')
             return redirect('/')
         flash('Invalid Credentials!', 'error')
