@@ -51,7 +51,7 @@ def login():
         if session['access']:
             return redirect('/')
     except:
-        print("Continue")
+        pass
     if request.method == "POST":
         uname = request.form['uname']
         pword = request.form['pword']
